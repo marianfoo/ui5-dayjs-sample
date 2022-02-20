@@ -1,9 +1,58 @@
-<mvc:View controllerName="de.marianzeis.datelibsample.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="de.marianzeis.datelibsample.controller.MainView" 
+xmlns:mvc="sap.ui.core.mvc" 	
+xmlns:form="sap.ui.layout.form" 
+xmlns:datejs="ui5-community.dayjs"
+displayBlock="true" 
+xmlns="sap.m">
     <Shell id="shell">
         <App id="app">
             <pages>
                 <Page id="page" title="{i18n>title}">
-                    <content />
+                    <content>
+                        <Button press="onPress"></Button>
+                        <form:SimpleForm
+                        width="auto"
+                        class="sapUiResponsiveMargin"
+                        layout="ResponsiveGridLayout"
+                        editable="true"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        columnsL="1"
+                        columnsM="1"
+                        title="Input" >
+                        <form:content>
+                            <Label text="Value" />
+                            <Input placeholder="yyyy/MM/dd" value="{/date}" />
+                            <Label text="Input Format" />
+                            <Input placeholder="yyyy/MM/dd" value="{/inputFormat}" />
+                            <Link href="https://day.js.org/docs/en/parse/string-format" target="_blank" text="Documentation"></Link>
+                            <Label text="Output Format" />
+                            <Input placeholder="yyyy/MM/dd" value="{/outputFormat}" />
+                            <Link href="https://day.js.org/docs/en/parse/string-format" target="_blank" text="Documentation"></Link>
+                        </form:content>
+                    </form:SimpleForm>
+                
+                    <form:SimpleForm
+                        width="auto"
+                        class="sapUiResponsiveMargin"
+                        layout="ResponsiveGridLayout"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        columnsL="1"
+                        columnsM="1"
+                        title="Custom Dates" >
+                        <form:content>
+                
+                            <Label text="Short" />
+                            <datejs:DayjsText id="dayjsControl" value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
+                
+                        </form:content>
+                    </form:SimpleForm>
+                    </content>
                 </Page>
             </pages>
         </App>

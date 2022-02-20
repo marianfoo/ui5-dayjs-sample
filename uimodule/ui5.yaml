@@ -21,3 +21,9 @@ server:
       configuration:
         port: 35729
         path: uimodule/webapp
+    - name: ui5-tooling-modules-middleware
+      afterMiddleware: compression
+builder:
+  customTasks:
+  - name: ui5-tooling-modules-task
+    afterTask: replaceVersion
