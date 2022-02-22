@@ -47,9 +47,26 @@ xmlns="sap.m">
                         title="Custom Dates" >
                         <form:content>
                 
-                            <Label text="Short" />
-                            <datejs:DayjsText id="dayjsControl" value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
+                            <Label text="Use Form Above" />
+                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
+
+                            <Label text="Add 1 Day" />
+                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            manipulate="{method: 'add',unit: 'day',amount: 1}"/>
+
+                            <Label text="Substract 2 Month " />
+                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            manipulate="{method: 'subtract',unit: 'month',amount: 2}"/>
+
+                            <Label text="Begin of Year" />
+                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            manipulate="{method: 'startOf',unit: 'year'}"/>
+
+                            <Label text="End of Quarter" />
+                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            manipulate="{method: 'endOf',unit: 'quarter'}"/>
                 
+
                         </form:content>
                     </form:SimpleForm>
                     </content>
