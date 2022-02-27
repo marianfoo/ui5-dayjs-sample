@@ -11,7 +11,7 @@ sap.ui.define(
         return Controller.extend("de.marianzeis.datelibsample.controller.MainView", {
             _data: {
                 "date": "2014/12/30",
-                "inputFormat": "yyyy/MM/dd",
+                "inputFormat": "YYYY/MM/DD",
                 "outputFormat": "dd.MM.YYYY"
             },
 
