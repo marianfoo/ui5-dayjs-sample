@@ -12,7 +12,9 @@
     "lint": "eslint ./**/webapp/**/*.js && prettier --check ./**/webapp/**/*.{js,xml}",
     "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --write ./**/webapp/**/*.{js,xml}",
     "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
-    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --a --dest uimodule/dist --include-task=generateManifestBundle"
+    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --a --dest uimodule/dist --include-task=generateManifestBundle",
+    "wdio": "cd uimodule && wdio run wdio.conf.js",
+    "wdio:headless": "set HEADLESS=true && cd uimodule && wdio run wdio.conf.js"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^1.1.0",
@@ -30,7 +32,15 @@
     "shx": "^0.3.3",
     "ui5-middleware-livereload": "^0.5.9",
     "ui5-tooling-modules": "^0.2.1",
-    "@marianfoo/ui5-cc-dayjs": "^0.0.5"
+    "@marianfoo/ui5-cc-dayjs": "^0.0.5",
+    "@wdio/cli": "^7.16.16",
+    "@wdio/devtools-service": "^7.16.16",
+    "@wdio/local-runner": "^7.16.16",
+    "@wdio/mocha-framework": "^7.16.15",
+    "@wdio/spec-reporter": "^7.16.14",
+    "chromedriver": "^98.0.1",
+    "wdio-chromedriver-service": "^7.2.8",
+    "wdio-ui5-service": "^0.8.2"
   },
   "ui5": {
     "dependencies": [

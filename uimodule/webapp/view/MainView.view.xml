@@ -48,7 +48,7 @@ xmlns="sap.m">
                         <form:content>
                 
                             <Label text="Use Form Above" />
-                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
+                            <datejs:DayjsText id="testId" value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
 
                             <Label text="Add 1 Day" />
                             <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
