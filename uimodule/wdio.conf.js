@@ -2,7 +2,7 @@ exports.config = {
 
     wdi5: {
         logLevel: "silent", // [optional] error | verbose | silent, default: "error"
-        url: "index.html", // [mandatory] {string} name of your bootstrap html file. If your server autoredirects to a 'domain:port/'-like root url, use empty string ''
+        url: "test/flpSandbox.html", // [mandatory] {string} name of your bootstrap html file. If your server autoredirects to a 'domain:port/'-like root url, use empty string ''
         skipInjectUI5OnStart: false, // [optional] {boolean}, default: false; true when UI5 is not on the start page, you need to later call <wdioUI5service>.injectUI5() manually
         waitForUI5Timeout: 15000 // [optional] {number}, default: 15000; maximum waiting time in milliseconds while checking for UI5 availability
       },
