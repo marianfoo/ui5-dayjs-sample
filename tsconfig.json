@@ -4,8 +4,13 @@
     "noEmit": true,
     "checkJs": true,
     "allowJs": true,
+    "moduleResolution": "node",
     "types": [
-      "@sapui5/ts-types"
+      "@sapui5/ts-types",
+      "node",
+      "webdriverio/async",
+      "@wdio/mocha-framework",
+      "wdio-ui5-service"
     ]
   }
 }
