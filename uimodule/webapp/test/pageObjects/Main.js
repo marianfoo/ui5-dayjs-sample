@@ -5,7 +5,7 @@ class Main extends Page {
         await super.open(`/test/flpSandbox.html#demarianzeisdatelibsample-tile`)
     }
 
-    _viewName = "de.marianzeis.datelibsample.controller.MainView"
+    _viewName = "de.marianzeis.datelibsample.view.MainView"
 
 
     async getField(id){
