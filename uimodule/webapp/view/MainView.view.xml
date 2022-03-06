@@ -50,7 +50,7 @@ xmlns="sap.m">
                             <Label text="Use Form Above" />
                             <datejs:DayjsText id="testId" value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
 
-                            <Label text="Add 1 Day" />
+                            <!-- <Label text="Add 1 Day" />
                             <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
                             manipulate="{method: 'add',unit: 'day',amount: 1}"/>
 
@@ -64,7 +64,7 @@ xmlns="sap.m">
 
                             <Label text="End of Quarter" />
                             <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
-                            manipulate="{method: 'endOf',unit: 'quarter'}"/>
+                            manipulate="{method: 'endOf',unit: 'quarter'}"/> -->
                 
 
                         </form:content>
