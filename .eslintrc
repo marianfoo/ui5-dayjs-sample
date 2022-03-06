@@ -4,13 +4,14 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 2019
+    "ecmaVersion": 2021
   },
   "globals": {
     "sap": true,
     "jQuery": true
   },
   "rules": {
+    "mocha/no-mocha-arrows": 0,
     "block-scoped-var": 1,
     "keyword-spacing": 2,
     "space-unary-ops": 2,
@@ -52,10 +53,14 @@
     "no-irregular-whitespace": 2
   },
   "plugins": [
-    "@sap/ui5-jsdocs"
+    "@sap/ui5-jsdocs",
+    "mocha",
+    "wdio"
   ],
   "extends": [
     "plugin:@sap/ui5-jsdocs/recommended",
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:mocha/recommended",
+    "plugin:wdio/recommended"
   ]
 }

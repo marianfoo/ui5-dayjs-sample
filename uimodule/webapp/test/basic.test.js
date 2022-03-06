@@ -1,9 +1,9 @@
-const Main = require("./pageObjects/Main")
+const Main = require("./pageObjects/Main");
 
 describe("ui5 basic", () => {
     before(async () => {
-        await Main.open()
-    })
+        await Main.open();
+    });
 
     // it("should have the right title", async () => {
     //     const title = await browser.getTitle()
@@ -11,8 +11,8 @@ describe("ui5 basic", () => {
     // })
 
     it("get field", async () => {
-        const simple_test = await Main.getField("testId")
-        var text = simple_test.getText();
-        expect(text).toEqual("01.01.2020")
-    })
-})
+        const field = await Main.getField("testId");
+        const text = await field.getText();
+        expect(text).toEqual("01.01.2020");
+    });
+});
