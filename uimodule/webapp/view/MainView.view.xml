@@ -23,8 +23,10 @@ xmlns="sap.m">
                         columnsM="1"
                         title="Input" >
                         <form:content>
-                            <Label text="Value" />
-                            <Input placeholder="yyyy/MM/dd" value="{/date}" />
+                            <Label text="Date1" />
+                            <Input placeholder="yyyy/MM/dd" value="{/date1}" />
+                            <Label text="Date2" />
+                            <Input placeholder="yyyy/MM/dd" value="{/date2}" />
                             <Label text="Input Format" />
                             <Input placeholder="yyyy/MM/dd" value="{/inputFormat}" />
                             <Link href="https://day.js.org/docs/en/parse/string-format" target="_blank" text="Documentation"></Link>
@@ -48,24 +50,32 @@ xmlns="sap.m">
                         <form:content>
                 
                             <Label text="Use Form Above" />
-                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
+                            <datejs:DayjsText id="testId" value="{path: '/date1'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"/>
 
                             <Label text="Add 1 Day" />
-                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            <datejs:DayjsText value="{path: '/date1'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
                             manipulate="{method: 'add',unit: 'day',amount: 1}"/>
 
                             <Label text="Substract 2 Month " />
-                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            <datejs:DayjsText value="{path: '/date1'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
                             manipulate="{method: 'subtract',unit: 'month',amount: 2}"/>
 
                             <Label text="Begin of Year" />
-                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            <datejs:DayjsText value="{path: '/date1'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
                             manipulate="{method: 'startOf',unit: 'year'}"/>
 
                             <Label text="End of Quarter" />
-                            <datejs:DayjsText value="{path: '/date'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
+                            <datejs:DayjsText value="{path: '/date1'}" inputFormat="{path: '/inputFormat'}" outputFormat="{path: '/outputFormat'}"
                             manipulate="{method: 'endOf',unit: 'quarter'}"/>
-                
+
+                            <Label text="Difference in Days" />
+                            <datejs:DayjsDiff date1="{path: '/date1'}" date2="{path: '/date2'}" inputFormat="{path: '/inputFormat'}" unit="day" integer="false"/>
+                            
+                            <Label text="Difference in Milliseconds" />
+                            <datejs:DayjsDiff date1="{path: '/date1'}" date2="{path: '/date2'}" inputFormat="{path: '/inputFormat'}"/>
+
+                            <Label text="Difference in Milliseconds and absolute" />
+                            <datejs:DayjsDiff date1="{path: '/date1'}" date2="{path: '/date2'}" inputFormat="{path: '/inputFormat'}" absolute="true"/>
 
                         </form:content>
                     </form:SimpleForm>
